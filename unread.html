@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=no">
+	<link rel="icon"
+		href="images/logos/whatsapp.png"/>
+	<title>WhatsApp</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body onload="myFunction('chatDiv');">
+	<!-- main container -->
+	<div class="container-fluid">
+		<div class="row fixed-top" id="top-fixed">
+		<div class="col">
+		<div  class="row bg-topdiv"> <!-- start of top div -->
+			<div class="col text-topdiv text-size">
+				WhatsApp
+			</div>
+			<div class="col text-topdiv d-none d-md-flex">
+				 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			</div>
+			<div class="col text-topdiv d-flex justify-content-end">
+				<div class="col-2">
+					<i class="fas fa-search"></i>
+				</div>
+				<div class="col-2 dropdown">
+					<i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					    <a class="dropdown-item" href="index.html">Read</a>
+					    <a class="dropdown-item" href="unread.html">Unread</a>
+  					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row bg-topdiv d-none d-md-flex">
+			<div class="col-1 mt-3 ml-4">
+				<i class="fas fa-camera" style="color:white"></i>
+			</div>
+			<div class="col text-topdiv">
+				<div class="row">
+					<div class="col"> 
+						CHATS
+					</div>
+					<div class="col"> 
+						<span class="unread">unr</span>
+					</div>
+				</div>
+			</div>
+			<div class="col text-topdiv">
+				STATUS
+			</div>
+			<div class="col text-topdiv">
+				CALLS
+			</div>
+		</div> 
+
+		<div class="row bg-topdiv d-md-none">
+			<div class="col-1 mt-3 ml-4">
+				<i class="fas fa-camera" style="color:white"></i>
+			</div>
+			<div class="col text-topdiv">
+					<a class="nav-link active" style="color : #ffffff" href="#" onclick="myFunction('chatDiv');">CHATS<span class="unread ml-1">u</span></a>
+			</div>
+			<div class="col text-topdiv">
+					<a class="nav-link" style="color : #ffffff" href="#" onclick="myFunction('statusDiv');">STATUS</a>			
+			</div>
+			<div class="col text-topdiv">
+				<a class="nav-link" style="color : #ffffff" href="#" onclick="myFunction('callsDiv');">CALLS</a>
+			</div>
+		</div> 
+		</div>
+		</div>
+		<div class="row" id="mainDiv">
+		<div class="col div-margin d-none d-md-flex" > <!-- start of web div-->
+			<div class="col d-flex flex-column bd-highlight mb-3 border border-light"> <!-- start of chat div web -->
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user1.svg" class="rounded-circle user-img user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user1.svg');">
+				  	</div>			 
+				  	<div class="col" onclick="chatImgChange('images/users/user1.svg','Neha V.','Today at 03:41 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Neha V.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Hello! how are you.</small>
+				  		</div>
+				  	</div>				
+				  	<div class="col d-flex justify-content-end">
+				  		<div class="row">
+				  			<small class="text-muted">10:49 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">6</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user2.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user2.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user2.svg','Official Group','Today at 03:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Official Group</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">+913456323456: Hello! guys good morning to all...</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">				 
+				  		<div class="row">
+				  			<small class="text-muted">27/7/2018</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">3</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user3.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user3.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user3.svg','Friendship','Today at 02 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Friendship</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Rajesh S: Friends, let's meet at college canteen.</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">			  
+				  		<div class="row">
+				  			<small class="text-muted">TODAY 8:47 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">4</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user4.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user4.svg');">
+				  	</div>
+				   <div class="col"  onclick="chatImgChange('images/users/user4.svg','Rajesh S.','Today at 05:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Rajesh S.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-camera"></i>
+					  			</small>
+					  			<small class="text-muted ml-1">
+					  				photo.
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">	
+				  		<div class="row">
+				  			<small class="text-muted">YESTERDAY</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">7</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user5.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user5.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user5.svg','Mithun K.','Today at 06:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithun K.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-video"></i>	
+					  			</small>
+					  			<small class="text-muted ml-1">
+					  				video.
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">			  	
+				  		<div class="row">
+				  			<small class="text-muted">09:00 PM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">5</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user6.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user6.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user6.svg','Pooja R.','Today at 04:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pooja R.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+				  					<i class="fas fa-check-double" style="color : #34B7F1"></i>
+				  				</small>				  	
+					  			<small class="text-muted">
+					  				you are welcome.
+					  			</small>
+					  			<small class="text-muted">
+				  					<i class="far fa-smile" style="background-color: yellow"></i>
+				  				</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">			  	
+				  		<div class="row">
+				  			<small class="text-muted">01:22 PM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">1</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user7.svg','Amol W.','Yesterday at 06:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+					  		<small class="text-muted">
+					  			https://youtube.be/
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<div class="row">
+				  			<small class="text-muted">08:23 PM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">2</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user8.svg','Vishal N.','Today at 10:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+					  		<small class="text-muted">
+					  			I am fine and what about you.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">04:12 PM</small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user9.svg','Dipti N.','Today at 09:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">			
+					  		<small class="text-muted">
+					  			Happy Birthday.
+					  		</small>
+					  		<small class="text-muted ml-1">
+					  			<i class="fas fa-birthday-cake"></i>	
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">12:00 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user10.svg','Mithusha D.','Today at 12:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  		
+					  		<small class="text-muted">
+					  			Thank you for helping me.
+					  		</small>
+					  		<small class="text-muted ml-1">
+					  			<i class="far fa-smile" style="background-color : yellow"></i>	
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">10:00 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user11.svg','Shamal P.','Today at 01:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  		
+					  		<small class="text-muted">
+					  			Its Ohk Thats fine.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">07:54 AM</small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user12.svg','Pravin P.','Today at 11:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  	
+					  		<small class="text-muted">
+					  			It was my pleasure to help you.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">09:23 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			</div> <!-- end of chat div web -->
+		</div>
+
+		<div class="col div-margin d-none d-md-flex" >
+			<div class="col d-flex flex-column-reverse bd-highlight mb-3 border border-light" style="margin-top: -50%">	<!-- start of status div web -->		 
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user1.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user1.svg');">
+				  	</div>
+				  	<div class="col mt-1" onclick="statusImgChange('images/users/user1.svg','Neha V.','Today at 03:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Neha V.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">2 days ago.</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+					
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user4.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user4.svg');">
+				  	</div>
+				   <div class="col" onclick="statusImgChange('images/users/user4.svg','Rajesh S.','Today at 04:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Rajesh S.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,11:12 AM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user5.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user5.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user5.svg','Mithun K.','Today at 10:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithun K.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,04:00 PM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user6.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user6.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user6.svg','Pooja R.','Today at 01:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pooja R.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,08:20 AM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user7.svg','Amol W.','Today at 08:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,09:00 AM</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user8.svg','Vishal N.','Today at 04:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,08:22 AM</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');"> 
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user9.svg','Dipti N.','Today at 03:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,12:50 PM</small>
+				  		</div>
+				  	</div>				  
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user10.svg','Mithusha D.','Today at 05:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex">				  		
+					  		<small class="text-muted">
+					  			Today,05:00P PM.
+					  		</small>
+				  		</div>
+				  	</div>				  
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row mb-4" style="background: lightgray">
+			  		<strong>Viewed updates</strong>
+			  	</div>
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col" onclick="statusImgChange('images/users/user11.svg','Shamal P.','Today at 07:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row">				  				
+					  		<small class="text-muted">
+					  			Today,11:51 PM.
+					  		</small>
+				  		</div>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col mt-1" onclick="statusImgChange('images/users/user12.svg','Pravinc P.','Yesterday at 08:40 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row">				  		
+					  		<small class="text-muted">
+					  			5 minutes ago.
+					  		</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			 
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/status.svg" style="height: 15vh">
+				  	</div>
+				  	<div class="col mt-1">
+				  		<div class="row">
+				  			<span style="font-weight : 450">My Status</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Tap to add status update </small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			</div> <!-- end of status div web -->
+		</div>
+
+		<div class="col div-margin d-none d-md-flex">
+			<div class="col d-flex flex-column bd-highlight mb-3 border border-light"> <!-- start of calls div web -->
+			   <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				13 July, 07:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				20 June, 09:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-down" style="color : red"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				10 May, 06:32 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-down" style="color : red"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				10 May, 05:20 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				15 January, 07:37 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				23/07/2017, 07:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			</div><!-- end of calls div web -->
+
+		</div> <!-- end of web div -->
+		</div>
+
+		<div class="row div-margin d-md-none" id="chatDiv" style="display: none"> <!-- start of mobile divisions -->
+			<div class="col d-flex flex-column bd-highlight mb-3 border border-light" style="overflow-y: scroll">
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user1.svg" class="rounded-circle user-img user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user1.svg');">
+				  	</div>			 
+				  	<div class="col" onclick="chatImgChange('images/users/user1.svg','Neha V.','Today at 03:41 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Neha V.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Hello! how are you.</small>
+				  		</div>
+				  	</div>				
+				  	<div class="col d-flex justify-content-end">
+				  		<div class="row">
+				  			<small class="text-muted">10:49 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">2</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user2.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user2.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user2.svg','Official Group','Today at 03:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Official Group</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">+913456323456: Hello! guys good morning to all...</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">				
+				  		<div class="row">
+				  			<small class="text-muted">27/7/2018</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">5</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user3.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user3.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user3.svg','Friendship','Today at 02 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Friendship</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Rajesh S: Friends, let's meet at college canteen.</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<div class="row">
+				  			<small class="text-muted">TODAY 8:47 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">5</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user4.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user4.svg');">
+				  	</div>
+				   <div class="col"  onclick="chatImgChange('images/users/user4.svg','Rajesh S.','Today at 05:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Rajesh S.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-camera"></i>
+					  			</small>
+					  			<small class="text-muted ml-1">
+					  				photo.
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<div class="row">
+				  			<small class="text-muted">TODAY 8:47 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">3</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user5.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user5.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user5.svg','Mithun K.','Today at 06:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithun K.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-video"></i>	
+					  			</small>
+					  			<small class="text-muted ml-1">
+					  				video.
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">			  	
+				  		<div class="row">
+				  			<small class="text-muted">TODAY 8:47 AM</small>
+				  		</div>
+				  		<div class="mt-4 row unread-msg">
+				  			<span class="ml-2">6</span>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user6.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user6.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user6.svg','Pooja R.','Today at 04:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pooja R.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+				  					<i class="fas fa-check-double" style="color : #34B7F1"></i>
+				  				</small>				  	
+					  			<small class="text-muted">
+					  				you are welcome.
+					  			</small>
+					  			<small class="text-muted">
+				  					<i class="far fa-smile" style="background-color: yellow"></i>
+				  				</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">01:22 PM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user7.svg','Amol W.','Yesterday at 06:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+					  		<small class="text-muted">
+					  			https://youtube.be/XWjdjfkj
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">08:23 PM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user8.svg','Vishal N.','Today at 10:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+					  		<small class="text-muted">
+					  			I am fine and what about you.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">04:12 PM</small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user9.svg','Dipti N.','Today at 09:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">			
+					  		<small class="text-muted">
+					  			Happy Birthday.
+					  		</small>
+					  		<small class="text-muted ml-1">
+					  			<i class="fas fa-birthday-cake"></i>	
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">12:00 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col"  onclick="chatImgChange('images/users/user10.svg','Mithusha D.','Today at 12:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  		
+					  		<small class="text-muted">
+					  			Thank you for helping me.
+					  		</small>
+					  		<small class="text-muted ml-1">
+					  			<i class="far fa-smile" style="background-color : yellow"></i>	
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">10:00 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user11.svg','Shamal P.','Today at 01:00 AM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  		
+					  		<small class="text-muted">
+					  			Its Ohk Thats fine.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">07:54 AM</small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col" onclick="chatImgChange('images/users/user12.svg','Pravin P.','Today at 11:00 PM');">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">				  	
+					  		<small class="text-muted">
+					  			It was my pleasure to help you.
+					  		</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small class="text-muted">09:23 AM</small>
+				  	</div>
+			 	</div>
+			  </div>
+			</div>
+		</div> <!-- end of chat div -->
+
+		<div class="row div-margin d-md-none" id="statusDiv"><!-- start of status div -->
+			<div class="col d-flex flex-column-reverse bd-highlight mb-3 border border-light">			 
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user1.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user1.svg');">
+				  	</div>
+				  	<div class="col-8 mt-1" onclick="statusImgChange('images/users/user1.svg','Neha V.','Today at 03:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Neha V.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">2 days ago.</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+					
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user4.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user4.svg');">
+				  	</div>
+				   <div class="col-8" onclick="statusImgChange('images/users/user4.svg','Rajesh S.','Today at 04:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Rajesh S.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,11:12 AM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user5.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user5.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user5.svg','Mithun K.','Today at 10:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithun K.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,04:00 PM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user6.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user6.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user6.svg','Pooja R.','Today at 01:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pooja R.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Yesterday,08:20 AM</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user7.svg','Amol W.','Today at 08:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,09:00 AM</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user8.svg','Vishal N.','Today at 04:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,08:22 AM</small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');"> 
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user9.svg','Dipti N.','Today at 03:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Today,12:50 PM</small>
+				  		</div>
+				  	</div>				  
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user10.svg','Mithusha D.','Today at 05:00 AM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex">				  		
+					  		<small class="text-muted">
+					  			Today,05:00P PM.
+					  		</small>
+				  		</div>
+				  	</div>				  
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row mb-4" style="background: lightgray">
+			  		<strong>Viewed updates</strong>
+			  	</div>
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col-8" onclick="statusImgChange('images/users/user11.svg','Shamal P.','Today at 07:00 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row">				  				
+					  		<small class="text-muted">
+					  			Today,11:51 PM.
+					  		</small>
+				  		</div>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row mb-4" style="background: lightgray">
+			  		<strong>Recent updates</strong>
+			  	</div>
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col-8 mt-1" onclick="statusImgChange('images/users/user12.svg','Pravinc P.','Yesterday at 08:40 PM')">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row">				  		
+					  		<small class="text-muted">
+					  			5 minutes ago.
+					  		</small>
+				  		</div>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col-4">
+				  		<img src="images/users/status.svg" style="height: 15vh">
+				  	</div>
+				  	<div class="col-8 mt-1">
+				  		<div class="row">
+				  			<span style="font-weight : 450">My Status</span>
+				  		</div>
+				  		<div class="row">
+				  			<small class="text-muted">Tap to add status update </small>
+				  		</div>
+				  	</div>				  	
+			 	</div>
+			  </div>
+			</div>
+		</div><!-- end status div -->
+
+		<div class="row div-margin d-md-none" id="callsDiv">
+			<div class="col d-flex flex-column bd-highlight mb-3 border border-light">
+			   <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user7.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user7.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Amol W.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				13 July, 07:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user8.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user8.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Vishal N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				20 June, 09:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user9.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user9.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Dipti N.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-down" style="color : red"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				10 May, 06:32 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user10.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user10.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Mithusha D.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-down" style="color : red"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				10 May, 05:20 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			  <div class="p-3 bd-highlight border-bottom"><div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user11.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user11.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Shamal P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				15 January, 07:37 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div></div>
+			  <div class="p-3 bd-highlight border-bottom">
+			  	<div class="row">
+				  	<div class="col">
+				  		<img src="images/users/user12.svg" class="rounded-circle user-img" data-toggle="modal" data-target="#exampleModal" onclick="imgProfileChange('images/users/user12.svg');">
+				  	</div>
+				  	<div class="col">
+				  		<div class="row">
+				  			<span style="font-weight : 450">Pravin P.</span>
+				  		</div>
+				  		<div class="row d-flex flex-row">
+				  				<small class="text-muted">
+					  				<i class="fas fa-arrow-up" style="color : lightgreen"></i>	
+					  			</small>
+					  			<small class="text-muted">
+					  				23/07/2017, 07:55 PM
+					  			</small>
+				  		</div>
+				  	</div>
+				  	<div class="col d-flex justify-content-end">
+				  		<small><img src="https://png.icons8.com/color/48/000000/phone.png"></small>
+				  	</div>
+			 	</div>
+			  </div>
+			</div>
+		</div> <!-- end of mobile divsions end of calls div --> 
+
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Profile</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body" style="background-color: lightgray">
+		        <div class="card">
+		  			<img id="profileImg" class="card-img-top" alt="Card image cap">
+		  			<form>
+					  <div class="form-group m-2">
+					    <label for="exampleFormControlFile1">Edit profile picture</label>
+					    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+					  </div>
+					</form>
+			  		<div class="card-body">
+			  			<div class="row">
+			  				<div class="col">			   		 
+			  					<h5 class="card-title">Bhaskar </h5>
+			  				</div>
+			  				<div class="col d-flex justify-content-end">
+			  					<i class="fas fa-pen" title="edit profile name"></i>
+			  				</div>
+					   	</div>
+					   	<small class="text-muted">This is not your username or pin this is your whatsApp name will be shown on profile.</small><br>
+
+			  		</div>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Chat section -->
+		<div class="row bg-topdiv fixed-top" id="chatTop">			
+			<div class="col-0 text-topdiv pl-0 mt-3 ml-4">
+				<i class="fas fa-arrow-left" onclick="myFunction('chatDiv');"></i>
+			</div>
+			<div class="col text-topdiv">
+				<img id="chatImg" class="rounded-circle mb-img-size">
+			</div>
+			<div class="col text-topdiv mb-text-size pl-0">
+				<div class="row"><span id="name"></span></div>
+				<div class="row"><span id="lastseen"></span></div>
+			</div>
+			<div class="col d-flex justify-content-end mt-2">
+				<div class="col text-topdiv pl-0">
+					<i class="fas fa-video"></i>
+				</div>
+				<div class="col text-topdiv">
+					<i class="fas fa-phone" area-hidden="true"></i>
+				</div>
+				<div class="col text-topdiv">
+					<i class="fas fa-ellipsis-v" area-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="row chat-bg chat-area-margin" id="chatArea">
+			<div class="col">
+				<div class="row">
+					<div class="col m-2 chat-bg-sender">
+						<div class="row">
+							<span class="p-2">Hi,How are you</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">09:05 PM</small>
+						</div>
+					</div>
+					<div class="col"></div>
+					<div class="col"></div>	
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col m-2 chat-bg-receiver">
+						<div class="row">
+							<span class="p-2">hey,hi fine thanks what about you..</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:00 PM</small>
+							<i class="fas fa-check-double" style="color : #34B7F1"></i>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col m-2 chat-bg-sender">
+						<div class="row">
+							<span class="p-2">I am also fine..</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:11 PM</small>
+						</div>
+					</div>
+					<div class="col"></div>
+					<div class="col"></div>	
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col m-2 chat-bg-receiver">
+						<div class="row">
+							<span class="p-2">Ohk..</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:12 PM</small>
+							<i class="fas fa-check-double" style="color : #34B7F1"></i>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col m-2 chat-bg-sender">
+						<div class="row">
+							<span class="p-2">what are you doing?.</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:13 PM</small>
+						</div>
+					</div>
+					<div class="col"></div>
+					<div class="col"></div>	
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col m-2 chat-bg-receiver">
+						<div class="row">
+							<span class="p-2">just listening to music.</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:14 PM</small>
+							<i class="fas fa-check-double" style="color : #34B7F1"></i>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col m-2 chat-bg-sender">
+						<div class="row">
+							<span class="p-2">ohh thats nice.</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:15 PM</small>
+						</div>
+					</div>
+					<div class="col"></div>
+					<div class="col"></div>	
+				</div>
+				<div class="row">
+					<div class="col"></div>
+					<div class="col"></div>
+					<div class="col m-2 chat-bg-receiver">
+						<div class="row">
+							<span class="p-2">ohk byee! feeling sleepy gn c u tmrw</span>
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">10:16 PM</small>
+							<i class="fas fa-check-double" style="color : #34B7F1"></i>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col m-2 chat-bg-sender">
+						<div class="row">
+							<img src="images/logos/gm.png">
+						</div>
+						<div class="row m-1 d-flex justify-content-end">
+							<small class="text-muted">07:00 AM</small>
+						</div>
+					</div>
+					<div class="col"></div>
+					<div class="col"></div>	
+				</div>
+			</div>
+		</div><!-- End of chat section -->
+
+
+		<div class="row status-bg" id="statusTop"><!-- start of status section -->
+			<div class="col pl-0">
+				<div class="progress" style="height: 1vh">
+				  <div class="progress-bar bg-white" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+			<div class="col pr-0 pl-0">
+				<div class="progress pl-0" style="height: 1vh">
+				  <div class="progress-bar pl-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row status-bg status-bg-h" id="statusArea">			
+			<div class="col-0 text-topdiv pl-0 mt-3">
+				<i class="fas fa-arrow-left" onclick="myFunction('chatDiv');"></i>
+			</div>
+			<div class="col text-topdiv">
+				<img id="statusImg" class="rounded-circle mb-img-size">
+			</div>
+			<div class="col text-topdiv mb-text-size pl-0">
+				<div class="row"><span id="statusName"></span></div>
+				<div class="row"><span id="statusLastSeen"</span></div>
+			</div>
+			<div class="col d-flex justify-content-end mt-2">
+				<div class="col text-topdiv">
+					<i class="fas fa-ellipsis-v" area-hidden="true"></i>
+				</div>
+			</div>
+		</div><!-- end of status section -->
+
+
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

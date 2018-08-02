@@ -1,0 +1,156 @@
+:root {
+	font-size: 16px;
+}
+
+body:hover {
+	cursor : pointer;
+}
+
+.bg-topdiv {
+	background-color : #075E54;
+}
+
+.text-topdiv {
+	color : #ffffff;
+	font-weight : 400;
+	margin : 1vw;
+}
+
+.mb-text-size {
+	font-size : 0.8rem; 
+}
+
+.mb-img-size {
+	height: 10vh;
+	border : 2px solid lightgray;
+}
+.chat-bg {
+	background: url("images/logos/chatback.png");
+	background-size: cover;
+}
+
+.status-bg {
+	background: url("images/logos/status.jpeg");
+}
+
+.status-bg-h {
+	height: 100vh;
+}
+
+.chat-bg-sender {
+	background-color: #ffffff;
+	border-radius: 0px 10px 10px 10px;
+	width: 40vw;
+}
+
+.chat-bg-receiver {
+	background-color: #DCF8C6;
+	border-radius: 10px 0px 10px 10px;
+	width: 40vw;
+}
+.text-size {
+	font-size : 1.2rem; 
+}
+
+.div-margin {
+	margin-top : none;
+	font-size : 1rem; 
+}
+
+.unread-msg {
+	background-color: lightgreen;
+	background-size: cover;
+	text-align: center;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	font-size: 1rem;
+	color: darkblue;
+}
+
+.unread {
+	background-color: #ffffff;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	color: #ffffff;
+}
+
+a:active {
+	border-bottom: 1.5px solid white;
+}
+
+a:hover {
+	border-bottom: 1.5px solid white;
+}
+
+img:hover {
+	cursor: hand;
+}
+
+.user-img {
+	height : 15vh;
+	border : 2px solid lightgray;   
+}
+
+.card-img {
+	border : 2px solid blue;  
+}
+
+.chat-area-margin {
+	margin-top: 0vh;
+}
+
+@media screen and (min-width : 324px) and (max-width : 468px) {
+	.div-margin {
+		margin-top : 17vh;
+	}
+	.chat-area-margin {
+		margin-top: 13vh;
+	}
+}
+
+@media screen and (min-width : 202px) and (max-width : 323px) {
+	.div-margin {
+		margin-top : 26vh;
+	}
+	.chat-area-margin {
+		margin-top: 25vh;
+	}
+}
+
+@media screen and (min-width : 322px) and (max-width : 380px) {
+	.div-margin {
+		margin-top : 26vh;
+	}
+	.chat-area-margin {
+		margin-top: 13vh;
+	}
+}
+
+@media screen and (max-width : 201px) {
+	.div-margin {
+		margin-top : 40vh;
+	}
+	.chat-area-margin {
+		margin-top: 20vh;
+	}
+}
+
+@media screen and (min-width : 469px) and (max-width : 767px) {
+	.div-margin {
+		margin-top : 20vh;
+	}
+	.chat-area-margin {
+		margin-top: 13vh;
+	}
+}
+
+@media screen and (min-width : 768px) {
+	.div-margin {
+		margin-top : 20vh;
+	}
+	.chat-area-margin {
+		margin-top: 13vh;
+	}
+}
