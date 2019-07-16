@@ -1,3 +1,0 @@
-- profile view is on click of images inside status,chats,and calls section.
-- click on 3 vertical dots of index.html to go to read or unread pages.
-- chat and status view will be available on click of div itself except image.
