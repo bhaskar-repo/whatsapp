@@ -2,12 +2,12 @@
 
 Implemented whatsapp design using Bootstrap
 
-##prerequisites
+## Prerequisites
 
-*[HTML]
-*[CSS]
+* [HTML]
+* [CSS]
 
-##Technologies Used
+## Technologies Used
 
 * [BootStrap](https://getBootstrap.com)
 
